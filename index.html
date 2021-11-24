@@ -6,27 +6,52 @@
 .center
 {
 	text-align:center;
-	padding: 100px 0;
+	padding: 10px 0;
 	font-size:30px;
-	background-image:url('https://static.runoob.com/images/mix/gradient2.png');
-	background-repeat:repeat-x;
 }
-img.normal {
-	height:auto;
-	width:750px;
-	height:750px;
-	}
+
+.card {
+    position: relative;
+    border: 15px solid #000;
+    box-shadow: inset 0px 0px 10px #000;
+}
+.card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    box-shadow: 2px 2px 5px #000;
+    border: 15px solid #fff;
+    -webkit-transform: translatex(-50%) translatey(-50%);
+    -ms-transform: translatex(-50%) translatey(-50%);
+    transform: translatex(-50%) translatey(-50%);
+}
+.card:before {
+    content: '';
+    display: block;
+    width: calc(100vw-30px);
+    height: 100vh;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    z-index: -2;
+}
+.card:nth-of-type(1):before {
+    background: url(https://c-ssl.duitang.com/uploads/blog/202108/22/20210822203159_bdb66.jpg) center center/cover fixed;
+}
+
+
 </style>
 </head> 
 <body> 
-<DIV id="CountMsg" class="center"> 
-<img class="normal" src="https://pic2.zhimg.com/v2-5ccecd67e8147dbf6d674feb7818bc3a_r.jpg?source=1940ef5c" style="margin: 0 auto;"/> 
+<div id="CountMsg" class="center"> 
 <p>和坠可爱的Jenny在一起</p>
 <span id="t_d">00天</span> 
 <span id="t_h">00时</span> 
 <span id="t_m">00分</span> 
 <span id="t_s">00秒</span> 
-</DIV> 
+<div class="card"><img src="https://pic2.zhimg.com/v2-5ccecd67e8147dbf6d674feb7818bc3a_r.jpg?source=1940ef5c">
+</div>
+</div> 
 <script type="text/javascript"> 
 function getRTime(){ 
 var BeginTime= new Date('2021/10/28 16:07:00'); //开始时间
