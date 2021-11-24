@@ -1,0 +1,50 @@
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>❤❤❤</title> 
+ <style>
+.center
+{
+	text-align:center;
+	padding: 100px 0;
+	font-size:30px;
+	background-image:url('https://static.runoob.com/images/mix/gradient2.png');
+	background-repeat:repeat-x;
+}
+img.normal {
+	height:auto;
+	width:750px;
+	height:750px;
+	}
+</style>
+</head> 
+<body> 
+<DIV id="CountMsg" class="center"> 
+<img class="normal" src="https://pic2.zhimg.com/v2-5ccecd67e8147dbf6d674feb7818bc3a_r.jpg?source=1940ef5c" style="margin: 0 auto;"/> 
+<p>和坠可爱的Jenny在一起</p>
+<span id="t_d">00天</span> 
+<span id="t_h">00时</span> 
+<span id="t_m">00分</span> 
+<span id="t_s">00秒</span> 
+</DIV> 
+<script type="text/javascript"> 
+function getRTime(){ 
+var BeginTime= new Date('2021/10/28 16:07:00'); //开始时间
+var NowTime = new Date(); 
+var t =NowTime.getTime() - BeginTime.getTime() ; 
+
+ 
+var d=Math.floor(t/1000/60/60/24); 
+var h=Math.floor(t/1000/60/60%24); 
+var m=Math.floor(t/1000/60%60); 
+var s=Math.floor(t/1000%60); 
+ 
+document.getElementById("t_d").innerHTML = d + "天"; 
+document.getElementById("t_h").innerHTML = h + "时"; 
+document.getElementById("t_m").innerHTML = m + "分"; 
+document.getElementById("t_s").innerHTML = s + "秒"; 
+} 
+setInterval(getRTime,1000); 
+</script> 
+</body> 
+</html>
